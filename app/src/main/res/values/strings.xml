@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RescuePetsAppFinal</string>
+    <string name="email_address_hint">Correo  Electrónico</string>
+    <string name="password_hint">Contraseña</string>
+</resources>
