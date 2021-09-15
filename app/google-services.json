@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "629522220436",
+    "project_id": "rescue-petsapp",
+    "storage_bucket": "rescue-petsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629522220436:android:f0b10dc47f5e688ad1bb81",
+        "android_client_info": {
+          "package_name": "com.jamzdeveploment.rescuepetsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629522220436-tfgpnl9qi7mjkmh99s7c26dkptvailo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU5iSeKoFKbYeQjG5BJNuBoc9F6GSe1BE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629522220436-tfgpnl9qi7mjkmh99s7c26dkptvailo4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
