@@ -7,9 +7,15 @@ import com.jamzdeveploment.rescuepetsapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+       ////Thread.sleep(3000)
+        //setTheme(R.style.AppTheme)
+
         super.onCreate(savedInstanceState)
 
         // paso 1 inicializar el objeto ActivityMainBinding

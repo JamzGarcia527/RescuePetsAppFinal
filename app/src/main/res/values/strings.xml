@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">RescuePetsAppFinal</string>
     <string name="email_address_hint">Correo  Electrónico</string>
-    <string name="password_hint">Contraseña</string><string name="title_active_login">Firebase Login</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="title_active_login">Firebase Login</string>
     <string name="password">Contraseña</string>
     <string name="new_password">Nueva contraseña</string>
     <string name="current_password">Contraseña actual</string>
