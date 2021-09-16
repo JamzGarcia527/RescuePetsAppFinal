@@ -25,7 +25,15 @@ class SignInActivity : AppCompatActivity() {
         binding.signInAppCompatButton.setOnClickListener {
             val mEmail = binding.emailEditText.text.toString()
             val mPassword = binding.passwordEditText.text.toString()
-            SignIn(mEmail, mPassword)
+
+            when {
+                mEmail.isEmpty() || mPassword.isEmpty() -> {
+                    Toast.makeText(baseContext, "Correo o contraseña incorrectos",
+                        Toast.LENGTH_SHORT).show()
+                } else -> {
+                SignIn(mEmail, mPassword)
+                }
+            }
         }
     }
 

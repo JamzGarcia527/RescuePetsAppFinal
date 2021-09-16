@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">RescuePetsAppFinal</string>
+    <string name="app_name">Animadopt</string>
     <string name="email_address_hint">Correo  Electrónico</string>
     <string name="password_hint">Contraseña</string>
-    <string name="title_active_login">Firebase Login</string>
+    <string name="title_active_login">Animadopt Login</string>
     <string name="password">Contraseña</string>
     <string name="new_password">Nueva contraseña</string>
     <string name="current_password">Contraseña actual</string>
@@ -31,4 +31,6 @@
     <string name="title_delete_account">Eliminar cuenta</string>
     <string name="subtitle_delete_account">Por motivos de seguridad para eliminar tu cuenta por completo, debes de ingresar tu contraseña.</string>
     <string name="delete">Eliminar</string>
+    <string name="button_label">Enviar</string>
+    <string name="message_text">email: %s, password: %s </string>
 </resources>

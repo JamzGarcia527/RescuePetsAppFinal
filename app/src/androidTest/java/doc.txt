@@ -1,0 +1,7 @@
+values/strings.xml
+// entero
+<string name="count_label">Cantidad : %d elementos</string>
+// string
+<string name="count_label">Cantidad : %s elementos</string>
+// número con decimales
+<string name="count_label">Cantidad : %.2f elementos</string>

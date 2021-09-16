@@ -3,6 +3,8 @@ package com.jamzdeveploment.rescuepetsapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 import com.jamzdeveploment.rescuepetsapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,9 +28,19 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             val email = binding.tilEmail.text.toString()
             val password = binding.tilPassword.text.toString()
-            // para realizar el debug en Logcat y tambien se ve en el RUN
-            Log.i("MainActivity","OnCreate: email: $email, password: $password")
-        }
+            val message = getString(R.string.message_text, email, password)
 
+            Snackbar.make(it, "Mensaje Snack\uD83E\uDDD0", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Mostrar Info"){showMessage(message)}
+                .show()
+
+
+            // para realizar el debug en Logcat y tambien se ve en el RUN
+            Log.i("MainActivity",message)
+        }
+    }
+
+    fun showMessage(message: String){
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 }
