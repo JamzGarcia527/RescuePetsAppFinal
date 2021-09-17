@@ -1,10 +1,14 @@
 package com.jamzdeveploment.rescuepetsapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.jamzdeveploment.rescuepetsapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,17 +16,18 @@ class MainActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-       ////Thread.sleep(3000)
-        //setTheme(R.style.AppTheme)
-
         super.onCreate(savedInstanceState)
+
+
 
         // paso 1 inicializar el objeto ActivityMainBinding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = Firebase.auth
         // nos referimos a los objetos de la vista
 
         binding.button.setOnClickListener {
@@ -37,7 +42,15 @@ class MainActivity : AppCompatActivity() {
 
             // para realizar el debug en Logcat y tambien se ve en el RUN
             Log.i("MainActivity",message)
+
+            singOut()
         }
+    }
+
+    private fun singOut(){
+        Firebase.auth.signOut()
+        val intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
     }
 
     fun showMessage(message: String){
