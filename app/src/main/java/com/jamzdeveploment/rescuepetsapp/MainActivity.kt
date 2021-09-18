@@ -28,6 +28,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
+
+
+        binding.oliveSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked){
+                binding.imageView3.setImageResource(R.drawable.olive_branch)
+            }else{
+                binding.imageView3.setImageResource(R.drawable.logo)
+            }
+
+        }
+
         // nos referimos a los objetos de la vista
 
         binding.button.setOnClickListener {
@@ -45,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
             singOut()
         }
+
     }
 
     private fun singOut(){
