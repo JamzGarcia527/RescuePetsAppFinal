@@ -34,4 +34,6 @@
     <string name="button_label">Enviar</string>
     <string name="message_text">email: %s, password: %s </string>
     <string name="string_value">mostrar marcas</string>
+    <string name="fiel_label_2">"Click Aqui "</string>
+    <string name="Salir">Salir</string>
 </resources>
