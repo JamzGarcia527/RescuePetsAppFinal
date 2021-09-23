@@ -80,6 +80,16 @@ class MainActivity : AppCompatActivity() {
             ).show()
              singOut()
         }
+
+        // programamos el envio a otra activity
+
+        binding.button3.setOnClickListener {
+            val intent = Intent(this, ExampleActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(baseContext, "Redirect to Example Activity xD",
+                Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     private fun showMessage(message: String) {

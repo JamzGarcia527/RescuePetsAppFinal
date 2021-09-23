@@ -36,4 +36,7 @@
     <string name="string_value">mostrar marcas</string>
     <string name="fiel_label_2">"Click Aqui "</string>
     <string name="Salir">Salir</string>
+    <string name="text">Hola Compañeros</string>
+    <string name="button_send_activity">ir a otra actuvity</string>
+    <string name="button_return">Volver</string>
 </resources>
