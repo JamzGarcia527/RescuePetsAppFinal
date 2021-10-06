@@ -1,5 +1,6 @@
 package com.jamzdeveploment.rescuepetsapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
@@ -44,6 +45,8 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    val intent = Intent(this, CheckEmailActivity::class.java)
+                    startActivity(intent)
                     Toast.makeText(baseContext, "Authentication Ok.",
                         Toast.LENGTH_SHORT).show()
                 } else {

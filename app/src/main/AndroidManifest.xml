@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RescuePetsAppFinal">
         <activity
+            android:name=".CheckEmailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CourseActivity"
+            android:exported="true" />
+        <activity
             android:name=".ExampleActivity"
             android:exported="true" />
         <activity
