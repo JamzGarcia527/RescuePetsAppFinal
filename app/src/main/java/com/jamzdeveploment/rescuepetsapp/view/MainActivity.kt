@@ -1,23 +1,29 @@
-package com.jamzdeveploment.rescuepetsapp
+package com.jamzdeveploment.rescuepetsapp.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
 import coil.api.load
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.jamzdeveploment.rescuepetsapp.ExampleActivity
+import com.jamzdeveploment.rescuepetsapp.R
+import com.jamzdeveploment.rescuepetsapp.SignInActivity
 import com.jamzdeveploment.rescuepetsapp.databinding.ActivityMainBinding
+import com.jamzdeveploment.rescuepetsapp.entities.UserDataCollectionItem
+import com.jamzdeveploment.rescuepetsapp.presenter.MainPresenter
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
+
+    lateinit var presenter: MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -92,6 +98,8 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT).show()
         }
 
+        binding.btnRest.setOnClickListener { callServiceGetUsers() }
+
     }
 
     private fun showMessage(message: String) {
@@ -107,6 +115,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
+    }
+
+    private fun callServiceGetUsers() {
+        presenter.listUsers()
+    }
+
+    fun showResult(result: List<UserDataCollectionItem>) {
+        Log.d("Success Response", result.toString())
+        Toast.makeText(this, "Success Response", Toast.LENGTH_LONG).show()
+    }
+
+    fun errorResult(t: String) {
+        Toast.makeText(this, "Error Response", Toast.LENGTH_LONG).show()
     }
 
 

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jamzdeveploment.rescuepetsapp.databinding.ActivityExampleBinding
+import com.jamzdeveploment.rescuepetsapp.view.MainActivity
 
 class ExampleActivity : AppCompatActivity() {
 

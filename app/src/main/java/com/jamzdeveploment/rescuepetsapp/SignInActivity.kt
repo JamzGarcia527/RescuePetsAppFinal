@@ -1,8 +1,6 @@
 package com.jamzdeveploment.rescuepetsapp
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.jamzdeveploment.rescuepetsapp.databinding.ActivitySignInBinding
+import com.jamzdeveploment.rescuepetsapp.view.MainActivity
 
 enum class ProviderType{
     BASIC,

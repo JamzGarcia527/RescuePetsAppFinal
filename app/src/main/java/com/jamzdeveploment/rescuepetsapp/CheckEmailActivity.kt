@@ -9,7 +9,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
 import com.jamzdeveploment.rescuepetsapp.databinding.ActivityCheckEmailBinding
-import com.jamzdeveploment.rescuepetsapp.databinding.ActivityMainBinding
+import com.jamzdeveploment.rescuepetsapp.view.MainActivity
 
 class CheckEmailActivity : AppCompatActivity() {
 
