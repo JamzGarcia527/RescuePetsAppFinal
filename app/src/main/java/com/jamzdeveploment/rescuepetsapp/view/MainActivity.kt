@@ -14,16 +14,21 @@ import com.google.firebase.ktx.Firebase
 import com.jamzdeveploment.rescuepetsapp.ExampleActivity
 import com.jamzdeveploment.rescuepetsapp.R
 import com.jamzdeveploment.rescuepetsapp.SignInActivity
+import com.jamzdeveploment.rescuepetsapp.WebServiceExampleActivity
 import com.jamzdeveploment.rescuepetsapp.databinding.ActivityMainBinding
 import com.jamzdeveploment.rescuepetsapp.entities.UserDataCollectionItem
 import com.jamzdeveploment.rescuepetsapp.presenter.MainPresenter
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity(), MainView {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
 
-    lateinit var presenter: MainPresenter
+    @Inject
+    private lateinit var presenter: MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -98,7 +103,24 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT).show()
         }
 
-        binding.btnRest.setOnClickListener { callServiceGetUsers() }
+        // intento # 2 conexion con web service
+
+        binding.button5.setOnClickListener {
+            val intent = Intent(this, WebServiceExampleActivity::class.java )
+            startActivity(intent)
+            Toast.makeText(baseContext, "Redirect to Web Service Activity xD",
+                Toast.LENGTH_SHORT).show()
+        }
+
+        // intento # 1 conexion con web service con retrofit2, Fail al llamar el servicio se cierra la App
+
+        binding.btnRest.setOnClickListener {
+            Toast.makeText(
+                baseContext, "Dio clic en web services",
+                Toast.LENGTH_SHORT
+            ).show()
+           // callServiceGetUsers()
+        }
 
     }
 
@@ -121,12 +143,12 @@ class MainActivity : AppCompatActivity() {
         presenter.listUsers()
     }
 
-    fun showResult(result: List<UserDataCollectionItem>) {
+    override fun showResult(result: List<UserDataCollectionItem>) {
         Log.d("Success Response", result.toString())
         Toast.makeText(this, "Success Response", Toast.LENGTH_LONG).show()
     }
 
-    fun errorResult(t: String) {
+    override fun errorResult(t: String) {
         Toast.makeText(this, "Error Response", Toast.LENGTH_LONG).show()
     }
 

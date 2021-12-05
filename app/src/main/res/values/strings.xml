@@ -26,4 +26,10 @@
     <string name="share_label">Share</string>
     <string name="googleButton">Google</string>
     <string name="btnReset">Consultar Web Servicer</string>
+    <string name="button5">ir a WebServiceActuvity</string>
+    <string name="button6">Volver</string>
+    <string name="textView">Conexion con Web Service</string>
+    <string name="title">Recuperación de la cuenta</string>
+    <string name="parrafo_account">Ingresa tu email para que le pueda enviar un correo con los pasos para cambiar la contraseña</string>
+    <string name="senEmailAppCompatButton">Enviar</string>
 </resources>

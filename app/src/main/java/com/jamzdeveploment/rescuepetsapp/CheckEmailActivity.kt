@@ -17,26 +17,36 @@ class CheckEmailActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
         binding = ActivityCheckEmailBinding.inflate(layoutInflater)
         setContentView(binding.root)
         auth = Firebase.auth
-
         val user = auth.currentUser
 
-
         binding.veficateEmailAppCompatButton.setOnClickListener {
-            val profileUpdates = userProfileChangeRequest {  }
-
-            user!!.updateProfile(profileUpdates).addOnCompleteListener { task ->
-                if(task.isSuccessful){
-                    if(user.isEmailVerified){
-                        reload()
-                    } else {
-                        Toast.makeText(this, "por favor verifica tu correo eléctronico", Toast.LENGTH_SHORT).show()
+            val profileUpdates = userProfileChangeRequest {
+            }
+            user!!.updateProfile(profileUpdates)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        if (user.isEmailVerified) {
+                            val intent = Intent(this, MainActivity::class.java)
+                            this.startActivity(intent)
+                        } else {
+                            Toast.makeText(this, "Por favor verifica tu correo.",
+                                Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
-            }
+
         }
+
+        binding.signOutImageView.setOnClickListener {
+            signOut()
+        }
+
+
     }
 
     public override fun onStart() {
@@ -61,7 +71,13 @@ class CheckEmailActivity : AppCompatActivity() {
     }
 
     private fun reload(){
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent( this, MainActivity::class.java)
         this.startActivity((intent))
+    }
+
+    private  fun signOut(){
+        Firebase.auth.signOut()
+        val intent = Intent(this, SignInActivity::class.java)
+        this.startActivity(intent)
     }
 }

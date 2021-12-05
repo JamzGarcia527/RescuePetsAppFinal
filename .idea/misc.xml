@@ -5,13 +5,17 @@
       <map>
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/drawable/splash_background.xml" value="0.2203125" />
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/drawable/splashscreen.xml" value="0.33" />
-        <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_check_email.xml" value="0.33" />
+        <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_account_recovery.xml" value="0.25" />
+        <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_check_email.xml" value="0.22" />
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_course.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_example.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_main2.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/activity_web_service_example.xml" value="0.25" />
+        <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/layout/patronlista.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/menu/menu_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/jimmy.cantor/AndroidStudioProjects/RescuePetsAppFinal/app/src/main/res/xml/login_logo.xml" value="0.20416666666666666" />
       </map>
